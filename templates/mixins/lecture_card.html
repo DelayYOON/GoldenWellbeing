@@ -1,0 +1,19 @@
+<div class="w-1/4 mb-10 px-2 overflow-hidden">
+    <a href="{% url 'lectures:detail' lecture.pk %}">
+        <div class="w-full h-64 bg-cover bg-center rounded-lg mb-2 "
+            style="background-image: url({{lecture.first_photo}});"></div>
+        <div class="flex justify-between mb-2 truncate">
+            <div class="w-4/5 overflow-hidden flex">
+                {% if lecture.host.superhost %}
+                <span
+                    class="mr-2 uppercase font-medium text-xs border border-black text-black rounded py-px px-1">Superhost</span>
+                {% endif %}
+                <span class="text-sm text-gray-600 block truncate">{{lecture.city}}, {{lecture.country.name}}</span>
+            </div>
+            <span class="text-sm flex items-center">
+                <i class="fas fa-star text-red-500 text-xs mr-1"></i> {{lecture.total_rating}}
+            </span>
+        </div>
+        <span class="text-black w-11/12 block truncate">{{lecture.name}}</span>
+    </a>
+</div>

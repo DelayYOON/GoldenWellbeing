@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block page_title %}
+GW 운동영상
+{% endblock page_title %}
+
+{% block content %}
+<div class="border mt-24 ">
+    <p class="border text-center text-4xl font-medium mb-5 bg-yellow-400 rounded-3xl">운동 영상</p>
+</div>
+
+<div class="flex flex-wrap mx-auto">
+    <div class="w-1/2 mb-10 px-2 h-full overflow-hidden">
+        <a href="/kr/ko_kr/w/xg/fw/fb/mercurial-collection" data-click-area="hp"
+            data-click-name="fb_p5_1_img_210220_fb mercurial _shop now">
+            <video id="pcVid" autoplay="autoplay" muted="muted" loop="loop" -webkit-playsinline="-webkit-playsinline"
+                playsinline="playsinline">
+                <source
+                    src="https://nikevideo.nike.com/72451143001/202101/2416/72451143001_6223702713001_6223705767001.mp4">
+            </video>
+        </a>
+    </div>
+
+    <div class="w-1/2 mb-10 px-2 h-full overflow-hidden">
+        <a href="/kr/ko_kr/w/xg/fw/fb/mercurial-collection" data-click-area="hp"
+            data-click-name="fb_p5_1_img_210220_fb mercurial _shop now">
+            <video id="pcVid" autoplay="autoplay" muted="muted" loop="loop" -webkit-playsinline="-webkit-playsinline"
+                playsinline="playsinline">
+                <source
+                    src="https://nikevideo.nike.com/72451143001/202101/2416/72451143001_6223702713001_6223705767001.mp4">
+            </video>
+        </a>
+    </div>
+
+    <div class="w-1/2 mb-10 px-2 h-full overflow-hidden">
+        <a href="/kr/ko_kr/w/xg/fw/fb/mercurial-collection" data-click-area="hp"
+            data-click-name="fb_p5_1_img_210220_fb mercurial _shop now">
+            <video id="pcVid" autoplay="autoplay" muted="muted" loop="loop" -webkit-playsinline="-webkit-playsinline"
+                playsinline="playsinline">
+                <source
+                    src="https://nikevideo.nike.com/72451143001/202101/2416/72451143001_6223702713001_6223705767001.mp4">
+            </video>
+        </a>
+    </div>
+
+    <div class="w-1/2 mb-10 px-2 h-full overflow-hidden">
+        <a href="/kr/ko_kr/w/xg/fw/fb/mercurial-collection" data-click-area="hp"
+            data-click-name="fb_p5_1_img_210220_fb mercurial _shop now">
+            <video id="pcVid" autoplay="autoplay" muted="muted" loop="loop" -webkit-playsinline="-webkit-playsinline"
+                playsinline="playsinline">
+                <source
+                    src="https://nikevideo.nike.com/72451143001/202101/2416/72451143001_6223702713001_6223705767001.mp4">
+            </video>
+        </a>
+    </div>
+
+    <div class="w-1/2 mb-10 px-2 h-full overflow-hidden">
+        <a href="/kr/ko_kr/w/xg/fw/fb/mercurial-collection" data-click-area="hp"
+            data-click-name="fb_p5_1_img_210220_fb mercurial _shop now">
+            <video id="pcVid" autoplay="autoplay" muted="muted" loop="loop" -webkit-playsinline="-webkit-playsinline"
+                playsinline="playsinline">
+                <source
+                    src="https://nikevideo.nike.com/72451143001/202101/2416/72451143001_6223702713001_6223705767001.mp4">
+            </video>
+        </a>
+    </div>
+
+    <div class="w-1/2 mb-10 px-2 h-full overflow-hidden">
+        <a href="/kr/ko_kr/w/xg/fw/fb/mercurial-collection" data-click-area="hp"
+            data-click-name="fb_p5_1_img_210220_fb mercurial _shop now">
+            <video id="pcVid" autoplay="autoplay" muted="muted" loop="loop" -webkit-playsinline="-webkit-playsinline"
+                playsinline="playsinline">
+                <source
+                    src="https://nikevideo.nike.com/72451143001/202101/2416/72451143001_6223702713001_6223705767001.mp4">
+            </video>
+        </a>
+    </div>
+</div>
+
+<div class="flex flex-wrap mx-auto">
+    {% if lectures %}
+    <ul>
+        {% for lecture in lectures %}
+        <li>{{ lecture.body}}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>영상 업로드 예정.</p>
+    {% endif %}
+</div>
+
+{% endblock content %}

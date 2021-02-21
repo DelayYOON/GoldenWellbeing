@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block page_title %}
+GW 설문지
+{% endblock page_title %}
+
+
+{% block content %}
+<div class="sm:container all:w-9/10 mx-5 my-10 mt-24 flex flex-col p-20 border-gray-400 bg-yellow-200 rounded-xl">
+    <p class="border text-center text-3xl font-medium mb-5 bg-yellow-400 rounded-3xl">설문지 안내</p>
+
+    <div class="box-content whitespace-normal text-xl -mx-20 text-center">
+        {% if surveys %}
+        <ul>
+            {% for survey in surveys %}
+            <li>{{ survey.body}}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>설문지 없음.</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="container mx-auto mx-5">
+
+    <a href="{% url 'surveys:presurvey' %}" class="mr-6">
+        <div class="border text-center text-3xl mx-5 h-20 bg-gray-400 place-content-center rounded-xl">
+            <h1 style="color:black" , class="mt-5">사전 설문 <i class="fas fa-check"></i> </h1>
+        </div>
+    </a>
+
+    <a href="{% url 'surveys:aftersurvey' %}" class="mr-6">
+        <div class="border text-center text-3xl mx-5 h-20 bg-gray-400 place-content-center rounded-xl">
+            <h1 style=" color:black" , class="mt-5">사후 설문</h1>
+        </div>
+    </a>
+</div>
+
+{% endblock content %}

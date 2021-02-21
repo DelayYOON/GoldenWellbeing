@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block page_title %}
+GW 사후설문
+{% endblock page_title %}
+
+{% block content %}
+<div class="border mt-24 ">
+    <p class="border text-center text-4xl font-medium mb-5 bg-yellow-400 rounded-3xl">사후 설문지</p>
+</div>
+
+<div class="container mx-auto mx-5">
+
+    <a href="{% url 'surveys:aftersurvey' %}" class="mr-6">
+        <div class="border text-center text-3xl mx-5 h-20 bg-gray-400 place-content-center rounded-xl">
+            <h1 style="color:black" , class="mt-5">1번</h1>
+        </div>
+    </a>
+
+    <a href="{% url 'surveys:aftersurvey' %}" class="mr-6">
+        <div class="border text-center text-3xl mx-5 h-20 bg-gray-400 place-content-center rounded-xl">
+            <h1 style=" color:black" , class="mt-5">2번</h1>
+        </div>
+    </a>
+
+    <a href="{% url 'surveys:aftersurvey' %}" class="mr-6">
+        <div class="border text-center text-3xl mx-5 h-20 bg-gray-400 place-content-center rounded-xl">
+            <h1 style=" color:black" , class="mt-5">3번</h1>
+        </div>
+    </a>
+
+    <a href="{% url 'surveys:aftersurvey' %}" class="mr-6">
+        <div class="border text-center text-3xl mx-5 h-20 bg-gray-400 place-content-center rounded-xl">
+            <h1 style=" color:black" , class="mt-5">4번</h1>
+        </div>
+    </a>
+
+    <a href="{% url 'surveys:aftersurvey' %}" class="mr-6">
+        <div class="border text-center text-3xl mx-5 h-20 bg-gray-400 place-content-center rounded-xl">
+            <h1 style=" color:black" , class="mt-5">5번</h1>
+        </div>
+    </a>
+
+    <a href="{% url 'surveys:aftersurvey' %}" class="mr-6">
+        <div class="border text-center text-3xl mx-5 h-20 bg-gray-400 place-content-center rounded-xl">
+            <h1 style=" color:black" , class="mt-5">6번</h1>
+        </div>
+    </a>
+</div>
+
+{% endblock content %}

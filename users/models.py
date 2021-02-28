@@ -18,6 +18,14 @@ class User(AbstractUser):
         (GENDER_FEMALE, "Female"),
     )
 
+    LOGIN_EMAIL = "email"
+    LOGING_KAKAO = "kakao"
+
+    LOGIN_CHOICES = (
+        (LOGIN_EMAIL, "Email"),
+        (LOGING_KAKAO, "Kakao"),
+    )
+
     avatar = models.ImageField(upload_to="avatars", null=True, blank=True)
     gender = models.CharField(choices=GENDER_CHOICES,
                               max_length=10, blank=True)
@@ -25,21 +33,28 @@ class User(AbstractUser):
     birthdate = models.DateField(blank=True, null=True)
     email_verified = models.BooleanField(default=False)
     email_secret = models.CharField(max_length=20, default="", blank=True)
+    login_method = models.CharField(
+        max_length=50, choices=LOGIN_CHOICES, default=LOGIN_EMAIL
+    )
 
     def verify_email(self):
-        if self.email_verified is False:
-            secret = uuid.uuid4().hex[:20]
-            self.email_secret = secret
-            html_message = render_to_string(
-                "emails/verify_email.html", {"secret": secret}
-            )
-            send_mail(
-                "Verify GoldenWellbeing Account",
-                strip_tags(html_message),
-                settings.EMAIL_FROM,
-                [self.email],
-                fail_silently=False,
-                html_message=html_message,
-            )
-            self.save()
-        return
+        pass
+
+
+    # def verify_email(self):
+    #     if self.email_verified is False:
+    #         secret = uuid.uuid4().hex[:20]
+    #         self.email_secret = secret
+    #         html_message = render_to_string(
+    #             "emails/verify_email.html", {"secret": secret}
+    #         )
+    #         send_mail(
+    #             "Verify GoldenWellbeing Account", 
+    #             strip_tags(html_message),
+    #             settings.EMAIL_FROM,
+    #             [self.email],
+    #             fail_silently=False,
+    #             html_message=html_message,
+    #         )
+    #         self.save()
+    #     return

@@ -18,7 +18,21 @@ class CustomUserAdmin(UserAdmin):
                     "birthdate",
                     "email_verified",
                     "email_secret",
+                    "login_method",
                 )
             },
         ),
+    )
+
+    list_filter = UserAdmin.list_filter 
+
+    list_display = (
+        "username",
+        "first_name",
+        "last_name",
+        "email",
+        "birthdate",
+        "is_active",
+        "email_verified",
+        "email_secret",
     )

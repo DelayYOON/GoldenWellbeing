@@ -5,11 +5,13 @@ GW 설문지
 
 
 {% block content %}
-<div class="sm:container all:w-9/10 mx-5 my-10 mt-24 flex flex-col p-20 border-gray-400 bg-yellow-200 rounded-xl">
-    <p class="border text-center text-3xl font-medium mb-5 bg-yellow-400 rounded-3xl">설문지 안내</p>
+<div class="container mx-auto mx-5 my-10 mt-24 flex flex-col p-20 border-gray-400 bg-yellow-200 rounded-xl">
+    <h1 class="border text-center text-4xl font-medium mb-5 -mx-10 bg-yellow-400 rounded-3xl">설문지 안내</h1>
 
     <div class="box-content whitespace-normal text-xl -mx-20 text-center">
-        {% if surveys %}
+        <h2>아래 [사전설문]을 눌러 참여해주세요.</h2>
+
+        <!-- {% if surveys %}
         <ul>
             {% for survey in surveys %}
             <li>{{ survey.body}}</li>
@@ -17,7 +19,7 @@ GW 설문지
         </ul>
         {% else %}
         <p>설문지 없음.</p>
-        {% endif %}
+        {% endif %} -->
     </div>
 </div>
 

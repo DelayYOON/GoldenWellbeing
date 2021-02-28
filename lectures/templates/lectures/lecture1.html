@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block page_title %}
+GW 운동영상
+{% endblock page_title %}
+
+{% block content %}
+<div class="border mt-24 ">
+    <h1 class="border text-center text-4xl font-medium mb-5 mx-3 bg-yellow-400 rounded-3xl">1주차 운동 영상</h1>
+</div>
+
+<div class="flex flex-wrap mx-auto">
+    <div class="w-1/2 mb-10 px-2 h-full overflow-hidden">
+        <a href="https://youtu.be/jiEPo1yGKz4">
+            <img src="{% static 'img/1주차.jpg' %}" />
+        </a>
+    </div>
+
+    <div class="w-1/2 mb-10 px-2 h-full overflow-hidden">
+        <a href="https://youtu.be/jiEPo1yGKz4">
+            <img src="{% static 'img/2주차.jpg' %}" />
+        </a>
+    </div>
+
+
+
+</div>
+
+{% endblock content %}

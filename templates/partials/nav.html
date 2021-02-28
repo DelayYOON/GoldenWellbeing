@@ -1,8 +1,42 @@
-<ul class="flex items-center text-sm font-medium h-full max-w-prose">
+{% load static %}
+<ul>
+    {% if user.is_authenticated %}
+    <li>
+        <div class="flex items-center">
+            <a href="{% url 'users:logout' %}">
+                <img class="w-16" src="{% static 'img/로그아웃.png' %}" />
+            </a>
+        </div>
+    </li>
+    {% else %}
+    <div class="flex flex-row">
+        <li>
+            <div class="flex items-center">
+                <a href="{% url 'users:login' %}" class="mt-1 mr-3">
+                    <img class="w-16" src="{% static 'img/로그인.png' %}" />
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="flex items-center">
+                <a href="{% url 'users:signup' %}">
+                    <img class="w-16" src="{% static 'img/회원가입.png' %}" />
+                </a>
+
+        </li>
+    </div>
+
+    {% endif %}
+
+</ul>
+
+
+<!-- 
+<ul class="p-0 flex items-center text-xs h-full max-w-prose">
     {% if user.is_authenticated %}
     <li class="nav_link"><a href="{% url 'users:logout' %}">로그아웃</a></li>
     {% else %}
     <li class="nav_link"><a href="{% url 'users:login' %}">로그인</a></li>
     <li class="nav_link"><a href="{% url 'users:signup' %}">회원가입</a></li>
     {% endif %}
-</ul>
+</ul> -->

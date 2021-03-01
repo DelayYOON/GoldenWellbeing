@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '8g13-==ghrb5m71qn!k^^$10k8qj7_k1+*98b9q1i9ore$dd5!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get("DEBUG"))
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".elasticbeanstalk.com"]
 
 
 # Application definition
@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'GW.wsgi.application'
 #     }
 # }
 
-if DEBUG:
+if DEBUG  is False:
 
     DATABASES = {
         "default": {
